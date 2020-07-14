@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Difference between var let and const keywords in JS
+
+        /*var: The scope of a variable defined with the keyword 'var' is limited to the 'function' within which it is defined.
+         If it is defined outside any function, the scope of the variable is global.
+         var is 'function scoped'.*/
+       
+         {
+         var a = 3;
+        console.log(a);
+        } //block 1
+        {
+         a++;
+         console.log(a);
+        } //block 2
+
+
+         /*let: The scope of a variable defined with the keyword 'let' or 'const' is limited to the 'block' defined by curly braces i.e. {} .
+         'let' and 'const' are 'block scoped'.*/
+
+         {
+         let b=10;
+         console.log(b);
+         b--;
+         console.log(b);
+         } //block 1
+         /*{
+          b++;//throws an error,cannot be reassigned out of scope.
+         console.log(b);
+         } //block 2*/
+
+
+         /*const: The scope of a variable defined with the keyword 'const' is limited to the block defined by curly braces.
+         However if a variable is defined with keyword const, it cannot be reassigned.
+         'const' cannot be re-assigned to a new value. However it can be mutated.*/
+          
+          const c=20;
+          {
+            console.log(c);
+            c=5;//throws an error because cannot be redeclared
+            console.log(c);
+           } //block 1
+        
+           /*{
+            c++; //throws an error because,const variables cannot be updated
+            console.log(c);
+           }//block 2*/
+
+         </script>
+    
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+</head>
+<body>
+    <script>
+      
+      //Various methods in console function
+
+//console.clear() method
+//Used to clear the console screen.
+console.clear();
+
+//console.log() method 
+//log() method print the output to the console which can be string, array, object, boolean etc.*/
+console.log("This is log method in console function of JS");
+
+//console.warn() method
+//It is used to generate warning in the console.
+console.warn("I'm a warning created by warn() method");
+
+//console.error() method
+//It is used to log error message to the console.
+console.error("This error is created by error() method");
+
+//console.time() and console.timeEnd() method
+//These two methods are used to know the amount of time spend by a block or a function through javascript console object.
+ console.time('Time taken'); 
+let fun1 = function(){ 
+	console.log('fun1 is running'); 
+} 
+let fun2 = function(){ 
+	console.log('fun2 is running'); 
+} 
+fun1();  
+fun2();  
+console.timeEnd('Time taken'); 
+
+// console.table() method 
+//This method is used to generate a table inside the console.
+console.table({'English':90, 'Maths':87, 'Science':100}); 
+
+//console.count() method
+//This method is used to count the number that the function hit by this counting method.
+for(let i=0;i<2;i++){ 
+    console.count(i); 
+} 
+
+//console.group() and console.groupEnd() methods
+//These methods of the console object allows us to group contents in a separate block, which will be indented.
+console.group('start');
+console.log("Group started");
+console.warn("Created inside group method");
+console.groupEnd('start');
+console.log("I am a new log outside the group method");
+
+//Custom console logs
+//Can add Styling to the console logs in order to make logs Custom. 
+const styles =  
+         `background-color: yellow; color: red; font-style:bold`; 
+console.log('%cJavaScript Essentials', styles);
+
+</script>
+</body>
+</html>
+
