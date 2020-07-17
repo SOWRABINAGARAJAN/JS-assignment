@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Use of switch case in JS</title>
+</head>
+<body>
+
+<p>Enter your marks</p>
+<input id="myMark" type="number"><br><br>
+<button onclick="getGrade()">Get grade</button>
+<p id="demo"></p>
+
+<script>
+  function getGrade() {
+  var result;
+  var marks = document.getElementById("myMark").value;
+
+  switch(marks) {
+    case "100":
+      result = "Marks are 100 and grade is A";
+    break;
+    case "50":
+    result = "Marks are 50 and grade is B";
+    break;
+    case "35":
+    result = "Marks are 35 and grade is C"
+    break;
+    default:
+    result = "Invalid Input...!";
+  }
+  document.getElementById("demo").innerHTML = result;
+  }
+</script>
+</body>
+</html>

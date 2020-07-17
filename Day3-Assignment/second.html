@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input seperation in JS</title>
+</head>
+<body>
+    <script>
+        var OS = prompt("Enter OS name");
+        var OS_name = OS.split(/(\s+)/);
+        console.log("The OS name is " +OS_name[0]+ " version is " +OS_name[2]);
+   </script>
+   </body>
+   </html>
