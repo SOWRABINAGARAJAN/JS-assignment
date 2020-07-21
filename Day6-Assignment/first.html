@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing colors using arrays in JS</title>
+</head>
+<body>
+
+    <div id="background" style="height: 1000px;"></div>
+    <script>
+
+        var doc = document.getElementById("background");
+        var color = ["red", "blue", "green", "yellow","orange","violet"];
+        var i = 0;
+        function changeColour() {
+        doc.style.backgroundColor = color[i];
+        i++;
+  
+        if(i > color.length - 1) 
+        i = 0;
+  }
+        setInterval(changeColour, 5000);
+    
+</script>
+</body>
+</html>
