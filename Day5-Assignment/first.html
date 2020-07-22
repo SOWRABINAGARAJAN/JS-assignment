@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Higher order functions in JS</title>
+</head>
+<body>
+    <script>
+
+        let arr = [];
+        var num = parseInt(prompt("Enter positive number"));
+        
+        for(let i = 1; i<=num;i++){
+            arr.push(i);
+        }
+        
+        //Generate odd numbers in array using filter
+        let odd = arr.filter((num) => num%2 != 0);
+        
+        //Generate odd cubes using filter and map higher order functions
+        let oddcubes = arr.filter(num => num%2 ==1).map(num=>num**3);
+
+        console.log(odd);
+        console.log(oddcubes);
+
+    </script>
+</body>
+</html>
